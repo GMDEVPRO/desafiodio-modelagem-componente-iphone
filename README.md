@@ -1,18 +1,56 @@
-## Getting Started
+Modelagem e Diagramação de um Componente iPhone
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Funcionalidades a Modelar
+Reprodutor Musical
+Métodos: tocar(), pausar(), selecionarMusica(String musica)
+Aparelho Telefônico
+Métodos: ligar(String numero), atender(), iniciarCorreioVoz()
+Navegador na Internet
+Métodos: exibirPagina(String url), adicionarNovaAba(), atualizarPagina()
+Objetivo
+Criar um diagrama UML que represente as funcionalidades descritas acima.
+Implementar as classes e interfaces correspondentes em Java (Opcional).
 
-## Folder Structure
 
-The workspace contains two folders by default, where:
-
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
++------------------------+
+|     ReprodutorMusical   |  <------------------------+
++------------------------+                            |
+| +tocar()               |                            |
+| +pausar()              |                            |
+| +selecionarMusica()    |                            |
++------------------------+                            |
+                                                       |
++------------------------+                            |
+|   AparelhoTelefonico   |  <------------------------+  
++------------------------+                            |
+| +ligar(numero)         |                            |
+| +atender()             |                            |
+| +iniciarCorreioVoz()   |                            |
++------------------------+                            |
+                                                       |
++------------------------+                            |
+|    NavegadorInternet    |  <------------------------+
++------------------------+ 
+| +exibirPagina(url)     |
+| +adicionarNovaAba()    |
+| +atualizarPagina()     |
++------------------------+
+        |
+        |
++------------------------+
+|      iPhone2007         | 
++------------------------+
+| -reprodutorMusical     |
+| -aparelhoTelefonico    |
+| -navegadorInternet     |
++------------------------+
+| +tocar()               |
+| +pausar()              |
+| +selecionarMusica()    |
+| +ligar(numero)         |
+| +atender()             |
+| +iniciarCorreioVoz()   |
+| +exibirPagina(url)     |
+| +adicionarNovaAba()    |
+| +atualizarPagina()     |
++------------------------+
