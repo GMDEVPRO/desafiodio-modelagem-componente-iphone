@@ -12,45 +12,41 @@ Criar um diagrama UML que represente as funcionalidades descritas acima.
 Implementar as classes e interfaces correspondentes em Java (Opcional).
 
 
-+------------------------+
-|     ReprodutorMusical   |  <------------------------+
-+------------------------+                            |
-| +tocar()               |                            |
-| +pausar()              |                            |
-| +selecionarMusica()    |                            |
-+------------------------+                            |
-                                                       |
-+------------------------+                            |
-|   AparelhoTelefonico   |  <------------------------+  
-+------------------------+                            |
-| +ligar(numero)         |                            |
-| +atender()             |                            |
-| +iniciarCorreioVoz()   |                            |
-+------------------------+                            |
-                                                       |
-+------------------------+                            |
-|    NavegadorInternet    |  <------------------------+
-+------------------------+ 
-| +exibirPagina(url)     |
-| +adicionarNovaAba()    |
-| +atualizarPagina()     |
-+------------------------+
-        |
-        |
-+------------------------+
-|      iPhone2007         | 
-+------------------------+
-| -reprodutorMusical     |
-| -aparelhoTelefonico    |
-| -navegadorInternet     |
-+------------------------+
-| +tocar()               |
-| +pausar()              |
-| +selecionarMusica()    |
-| +ligar(numero)         |
-| +atender()             |
-| +iniciarCorreioVoz()   |
-| +exibirPagina(url)     |
-| +adicionarNovaAba()    |
-| +atualizarPagina()     |
-+------------------------+
+```mermaid
+classDiagram
+    class ReprodutorMusical {
+        +tocar()
+        +pausar()
+        +selecionarMusica()
+    }
+
+    class AparelhoTelefonico {
+        +ligar(numero)
+        +atender()
+        +iniciarCorreioVoz()
+    }
+
+    class NavegadorInternet {
+        +exibirPagina(url)
+        +adicionarNovaAba()
+        +atualizarPagina()
+    }
+
+    class iPhone2007 {
+        -reprodutorMusical
+        -aparelhoTelefonico
+        -navegadorInternet
+        +tocar()
+        +pausar()
+        +selecionarMusica()
+        +ligar(numero)
+        +atender()
+        +iniciarCorreioVoz()
+        +exibirPagina(url)
+        +adicionarNovaAba()
+        +atualizarPagina()
+    }
+
+    ReprodutorMusical <|-- iPhone2007
+    AparelhoTelefonico <|-- iPhone2007
+    NavegadorInternet <|-- iPhone2007
